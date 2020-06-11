@@ -25,22 +25,23 @@ border-right: 1px solid #49111c;
 	padding-top: 15px;
 }
 .navbar-brand h1{
-	font-size: 1.5em;
+	font-size: 1.7em;
 	font-family: 'Lora', serif;
-	color: #800000;
+	color: #49111c;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 1px #000000;
+	text-shadow: 1.5px 1.5px 1.5px #000000;
 	font-size: bold;
 	margin-top: 0;
 	margin-bottom: 5px;
 	line-height: .75;
+	opacity: 2.0;
 }
 .navbar a:hover,.navbar a:focus{
 	text-decoration: none;
 }
 .navbar p{
-	font-size: bold;
-	color: #000000;
+	font-weight:  bold;
+	color: #49111c;
 }
 #nav-list{
 	margin-top: 10px;
@@ -149,6 +150,11 @@ font-size: 0.7em;
 #time,#address{
 	font-size: 1.5vw;
 }
+.input-group{
+	width: 10%;
+	text-align: left;
+
+}
 }
 @media(min-width: 992px) and (max-width: 1199px){
 	#logo-image{
@@ -162,7 +168,6 @@ font-size: 0.7em;
 		background-image: url("../images/back-md.png");
 		height: 550px;
 }
- 
 }
 @media(min-width: 768px) and (max-width: 991px){
 	.navbar-brand h1{
@@ -184,7 +189,7 @@ font-size: 1.7vw;
 }
 @media(max-width: 767px){
 	.navbar-brand h1{
-		font-size: 4.5vw;
+		font-size: 6.0vw;
 	}
 	.navbar-brand p span{
 		font-size:2.3vw;
@@ -198,6 +203,7 @@ font-size: 1.7vw;
 	#nav-list li:nth-child(1){
 		margin-top:-5px;
 	}
+
 	
 	  #call-btn > a 
 	  	{
@@ -236,7 +242,9 @@ font-size: 2.5vw;
   #special-img span{
   	font-size: .8em;
   }
-
+  .form-group label{
+font-size: .8em;
+}
 }
 .category-tile { 
   position: relative;
@@ -300,6 +308,14 @@ font-family: serif;
 }
 #special-title{
 	margin-bottom: 30px;
+}
+.form-group label{
+	color: yellow;
+}
+.input-group{
+	width: 25%;
+	text-align: left;
+
 }
 #about-dev p{
 margin-bottom: 20px;
