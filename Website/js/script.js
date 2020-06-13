@@ -15,7 +15,7 @@ xmlhttp.onload= function() {
   		img.setAttribute("alt", "special");
   		img.setAttribute("id","spec-img");
   		document.getElementById("picture").appendChild(img);
-		document.getElementById("spec-name").innerHTML=$myObj.name[i]+"<br>";
+		document.getElementById("spec-name").innerHTML="item:"+$myObj.name[i]+"<br>";
 		document.getElementById("spec-price").innerHTML="price:"+$myObj.price[i];
 		document.getElementById("spec-disc").innerHTML=$myObj.disc[i];
 		break;
