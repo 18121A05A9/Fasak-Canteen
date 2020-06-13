@@ -1,12 +1,27 @@
-function up(max) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
-    if (document.getElementById("myNumber").value >= parseInt(max)) {
-        document.getElementById("myNumber").value = max;
-    }
+$(function (event){
+	var xmlhttp = new XMLHttpRequest();
+xmlhttp.onload= function() {
+  if (this.readyState == 4 && this.status == 200) {
+
+    var myObj = JSON.parse(this.responseText);
+    	 window.$myObj=myObj;
+  }
+  var d=new Date();
+  var img = new Image();
+  for(var i=0;i<7;i++){
+	if((d.getDay()-1)==i){
+        img.src = $myObj.img[i];
+  		img.setAttribute("class", "img-responsive");
+  		img.setAttribute("alt", "special");
+  		img.setAttribute("id","spec-img");
+  		document.getElementById("picture").appendChild(img);
+		document.getElementById("spec-name").innerHTML=$myObj.name[i]+"<br>";
+		document.getElementById("spec-price").innerHTML=$myObj.price[i];
+		document.getElementById("spec-disc").innerHTML=$myObj.disc[i];
+		break;
+	}
 }
-function down(min) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
-    if (document.getElementById("myNumber").value <= parseInt(min)) {
-        document.getElementById("myNumber").value = min;
-    }
-}
+};
+xmlhttp.open("GET", "data/spec-data.json", true);
+xmlhttp.send();
+});
